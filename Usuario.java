@@ -9,13 +9,19 @@ public class Usuario
 {
     // indica el nombre del usuario
     private String nombreUsuario;
+    //indica la cantidad total de proteinas que ha ingerido el usuario
     private float proteinas;
+    //indica la cantidad total de carbohidratos que ha ingerido el usuario
     private float carbohidratos;
+    //indica la cantidad total de grasas que ha ingerido el usuario
     private float grasas;
+    //indica la cantidad total de calorias que ha ingerido el usuario
     private float calorias;
+    
 
     /**
-     * Constructor for objects of class Usuario
+     * Constructor que indica el nombre del usuaruo y la cantidad inicial de proteinas
+     * carbohidratos,grasas y calorias de inicio
      */
     public Usuario(String nombreUsuario)
     {
@@ -31,6 +37,7 @@ public class Usuario
      */
     public void comer(Alimentos nombre,float cantidad)
     {
+        
         proteinas    = proteinas + nombre.getProteinas();
         carbohidratos= carbohidratos + nombre.getCarbohidratos();
         grasas       = grasas + nombre.getGrasas();
