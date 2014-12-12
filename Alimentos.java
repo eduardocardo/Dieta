@@ -51,4 +51,35 @@ public class Alimentos
         
     }   
     
+    /**
+     * Devuelve la cantidad de proteinas que contiene el alimento
+     */
+    public float getProteinas()
+    {
+        return proteinas;
+    } 
+    
+    /**
+     * Devuelve la cantidad de carbohidratos que devuelve el alimento
+     */
+    public float getCarbohidratos()
+    {
+        return carbohidratos;
+    }
+    
+    /**
+     * Devuelve la cantidad de grasas que contiene el alimento
+     */
+    public float getGrasas()
+    {
+        return grasas;
+    }
+    
+    /**
+     * Devuelve la cantidad de calorias que tiene el alimento
+     */
+    public float getCalorias()
+    {
+        return calorias;
+    }   
 }
