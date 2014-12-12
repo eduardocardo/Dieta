@@ -17,6 +17,8 @@ public class Usuario
     private float grasas;
     //indica la cantidad total de calorias que ha ingerido el usuario
     private float calorias;
+    //indica la cantidad total en gramos de macronutrientes ingeridos
+    private float totalMacro;
     
 
     /**
@@ -30,6 +32,7 @@ public class Usuario
         carbohidratos=0;
         grasas=0;
         calorias=0;
+        totalMacro=0;
     }
 
     /**
@@ -42,6 +45,7 @@ public class Usuario
         carbohidratos= carbohidratos + nombre.getCarbohidratos();
         grasas       = grasas + nombre.getGrasas();
         calorias     = calorias + nombre.getCalorias();
+        totalMacro = proteinas + carbohidratos + grasas;
     } 
     
     /**
@@ -51,9 +55,11 @@ public class Usuario
     public void mostrarDatos()
     {
         System.out.println("Nombre :" + nombreUsuario);
-        System.out.println("Gramos de proteinas ingeridos: " + proteinas);
-        System.out.println("Gramos de carbohidratos ingeridos: " + carbohidratos); 
-        System.out.println("Gramos de grasas ingeridos: " + grasas); 
+        System.out.println("Gramos de proteinas ingeridos: " + proteinas+"(" + proteinas*100/totalMacro + "% )");
+        System.out.println("Gramos de carbohidratos ingeridos: " + carbohidratos+ "(" + carbohidratos*100/totalMacro + "%)"); 
+        System.out.println("Gramos de grasas ingeridos: " + grasas+ "(" + grasas*100/totalMacro + "%)"); 
         System.out.println("Gramos de calorias ingeridos: " + calorias); 
-    }   
+    } 
+    
+    
 }
